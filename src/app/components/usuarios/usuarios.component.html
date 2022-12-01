@@ -1,0 +1,47 @@
+<div class="container-toolbar">
+  <button class="new" mat-raised-button color="background" routerLink="/Usuario/new">Novo Usuário </button>
+</div>
+  <div class="div-table mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource">
+      <ng-container matColumnDef="id" >
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element" class="actions">
+          <button mat-button routerLink="/Usuario/{{ element.id }}">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button (click)="delete(element)" mat-button>
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Nome</th>
+        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="birth_date">
+        <th mat-header-cell *matHeaderCellDef>Data de nascimento</th>
+        <td mat-cell *matCellDef="let element">{{ element.birth_date }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="access_level">
+        <th mat-header-cell *matHeaderCellDef>Nível de acesso</th>
+        <td mat-cell *matCellDef="let element">{{ element.access_level }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="office_role">
+        <th mat-header-cell *matHeaderCellDef>Cargo</th>
+        <td mat-cell *matCellDef="let element">{{ element.office_role }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="sector">
+        <th mat-header-cell *matHeaderCellDef>sector</th>
+        <td mat-cell *matCellDef="let element">{{ element.sector }}</td>
+      </ng-container>
+      
+      <tr mat-header-row *matHeaderRowDef="columns;"></tr>
+      <tr mat-row *matRowDef="let row; columns: columns;"></tr>
+
+    </table>    
+  </div>

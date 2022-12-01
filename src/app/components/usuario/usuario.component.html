@@ -1,0 +1,31 @@
+<div class="container">    
+    <mat-form-field appearance="outline" class="full-width" col-50>
+      <mat-label>Nome</mat-label>
+      <input matInput placeholder="preencha o nome do usuario" [(ngModel)]="model.name" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width" col-50>
+        <mat-label>Data de nascimento</mat-label>
+        <input matInput placeholder="preencha a data de nascimento do usuario" [(ngModel)]="model.birth_date" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width" col-50>
+        <mat-label>Nível de acesso</mat-label>
+        <input matInput placeholder="preencha o nível do usuario" [(ngModel)]="model.access_level" required>
+      </mat-form-field>    
+
+      <mat-form-field appearance="outline" class="full-width" col-50>
+        <mat-label>Cargo</mat-label>
+        <input matInput placeholder="preencha o cargo do usuario" [(ngModel)]="model.office_role" required>
+      </mat-form-field>   
+      
+      <mat-form-field appearance="outline" class="full-width" col-50>
+        <mat-label>Setor</mat-label>
+        <input matInput placeholder="preencha o setor do usuario" [(ngModel)]="model.sector" required>
+      </mat-form-field>    
+
+    <div class="toolbar___form">
+      <button mat-raised-button routerLink="/usuarios">Cancelar</button>
+      <button mat-raised-button color="primary" (click)="save()">Salvar</button>
+    </div>
+  </div>
