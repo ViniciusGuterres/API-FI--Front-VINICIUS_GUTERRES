@@ -54,6 +54,6 @@ export class UsuariosComponent implements OnInit {
   async delete(usuario: UsuarioModel): Promise<void> {
     const result = await this.usuarioSrv.delete(usuario.id);
     this.bind();
-    this.router.navigateByUrl('/users');
+    this.router.navigateByUrl('/usuarios');
   }
 }

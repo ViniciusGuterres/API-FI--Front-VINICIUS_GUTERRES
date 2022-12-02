@@ -34,8 +34,6 @@ export class FilmesComponent implements OnInit {
     console.log("inicio")
     const filmes = await this.filmeSrv.GetAll();
     const { data } = filmes.data;
-    console.log("🚀 ~ file: filmes.component.ts:37 ~ FilmesComponent ~ bind ~ data", data)
-
 
     this.dataSource = new MatTableDataSource(data);
   }
@@ -44,6 +42,6 @@ export class FilmesComponent implements OnInit {
   async delete(usuario: FilmesModel): Promise<void> {
     const result = await this.filmeSrv.delete(usuario.id);
     this.bind();
-    this.router.navigateByUrl('/users');
+    this.router.navigateByUrl('/usuarios');
   }
 }

@@ -17,6 +17,8 @@ export abstract class BaseService<T> {
   }
 
   public GetById(id: string): Promise<IResultHttp> {
+    console.log('here');
+    
     return this.http.get(`${this.urlBase}/${id}`);
   }
 
