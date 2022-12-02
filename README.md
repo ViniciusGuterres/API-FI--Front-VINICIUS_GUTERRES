@@ -11,3 +11,7 @@ Menu opções filmes e usuários:
  Tela de lista de usuários (deletar e editar usuários):
 
 ![image](https://user-images.githubusercontent.com/64093692/205191883-f32453a4-fd1a-482a-940e-cf3bc03c6b42.png)
+
+Tela de Cadastro de filmes:
+
+![image](https://user-images.githubusercontent.com/64093692/205192917-4d48d5bb-3631-449f-aa9b-24bec829d3f8.png)
