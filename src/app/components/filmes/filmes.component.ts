@@ -42,6 +42,6 @@ export class FilmesComponent implements OnInit {
   async delete(usuario: FilmesModel): Promise<void> {
     const result = await this.filmeSrv.delete(usuario.id);
     this.bind();
-    this.router.navigateByUrl('/usuarios');
+    this.router.navigateByUrl('/filmes');
   }
 }

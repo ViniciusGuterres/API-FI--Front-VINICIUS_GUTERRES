@@ -9,7 +9,7 @@
                 <button mat-button routerLink="/filme/{{ element.id }}">
                     <mat-icon>edit</mat-icon>
                 </button>
-                
+
                 <button (click)="delete(element)" mat-button>
                     <mat-icon>delete</mat-icon>
                 </button>
@@ -23,7 +23,7 @@
 
         <ng-container matColumnDef="is_on_netflix">
             <th mat-header-cell *matHeaderCellDef>Está na netflix ? </th>
-            <td mat-cell *matCellDef="let element">{{ element.is_on_netflix }}</td>
+            <td mat-cell *matCellDef="let element">{{ element.is_on_nextflix ? '&#10003;' : '&#10005;' }}</td>
         </ng-container>
 
         <ng-container matColumnDef="imdb_score">

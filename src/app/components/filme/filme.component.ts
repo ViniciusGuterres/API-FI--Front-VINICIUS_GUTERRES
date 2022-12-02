@@ -16,7 +16,7 @@ export class FilmeComponent implements OnInit {
   model: FilmesModel = new FilmesModel();
 
   constructor(
-    private filmerv: FilmeService,
+    private filmesrv: FilmeService,
     private router: Router,
     private active: ActivatedRoute
   ) { }
@@ -27,7 +27,7 @@ export class FilmeComponent implements OnInit {
 
   async getId(id: string): Promise<void> {
     if (id === 'new') { return; }
-    const result = await this.filmerv.GetById(id);
+    const result = await this.filmesrv.GetById(id);
     const { data } = result.data;
 
     const filme = data.map((item: any) => {
@@ -44,7 +44,8 @@ export class FilmeComponent implements OnInit {
   }
 
   async save(): Promise<void> {
-    const result = await this.filmerv.post(this.model);
+    const result = await this.filmesrv.post(this.model);
+
     if (result.success) {
       this.router.navigateByUrl('/filme');
     }
