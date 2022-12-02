@@ -47,7 +47,7 @@ export class FilmeComponent implements OnInit {
     const result = await this.filmesrv.post(this.model);
 
     if (result.success) {
-      this.router.navigateByUrl('/filme');
+      this.router.navigateByUrl('/filmes');
     }
   }
 
